@@ -42,6 +42,12 @@ lerna-debug.log*
 .env.production.local
 .env.local
 
+# Docker 
+.docker/*
+!.docker/entrypoint.sh
+!.docker/postgres/Dockerfile
+
+
 # temp directory
 .temp
 .tmp
