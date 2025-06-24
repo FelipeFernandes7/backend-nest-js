@@ -1,18 +1,18 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { EnvConfigService } from './env-config.service';
+import { EnvConfigService } from '../../env-config.service';
 
-describe('EnvConfigService', () => {
-  let service: EnvConfigService;
+describe('EnvConfigService unit tests', () => {
+  let sut: EnvConfigService;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       providers: [EnvConfigService],
     }).compile();
 
-    service = module.get<EnvConfigService>(EnvConfigService);
+    sut = module.get<EnvConfigService>(EnvConfigService);
   });
 
   it('should be defined', () => {
-    expect(service).toBeDefined();
+    expect(sut).toBeDefined();
   });
 });
